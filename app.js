@@ -1,5 +1,4 @@
 // Backend modularizado con Node.js, Express y MySQL
-
 const express = require('express');
 const cors = require('cors');
 const app = express();
@@ -26,6 +25,7 @@ app.use('/api/categorias', categoriaRoutes);
 app.use('/api/auth', authRoutes);
 
 // Iniciar servidor
-app.listen(port, () => {
+/* app.listen(port, () => {
   console.log(`Servidor backend corriendo en http://localhost:${port}`);
-});
+}); */
+module.exports = app;
