@@ -3,11 +3,17 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true })); // Opcional, pero recomendable
+const io = new Server(server, {
+  cors: {
+    origin: "*", // ⚠️ para pruebas. En producción, especifica el dominio de tu app Flutter
+    methods: ["GET", "POST"]
+  }
+});
 
 // Rutas
 const productoRoutes = require('./src/routes/producto.routes');

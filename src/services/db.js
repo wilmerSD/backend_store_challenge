@@ -2,9 +2,9 @@
 const mysql = require('mysql2/promise');
 
 const pool = mysql.createPool({
-  host: '127.0.0.1',//localhost
+  host: 'turntable.proxy.rlwy.net',//'127.0.0.1',//localhost
   user: 'root',
-  password: '',
+  password: 'bQwUFBEguykbBXYUTwyjKHDNxfirnaHF',//''
   database: 'marketChallenge',
   waitForConnections: true,
   connectionLimit: 10,
